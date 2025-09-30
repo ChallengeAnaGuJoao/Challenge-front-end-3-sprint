@@ -22,6 +22,10 @@ const Teste = lazy(() =>
   import("./pages/teste").then((m) => ({ default: m.Teste }))
 );
 
+const Login = lazy(() =>
+  import("./pages/login").then((m) => ({ default: m.Login }))
+);
+
 const Integrantes = lazy(() =>
   import("./pages/integrantes").then((m) => ({ default: m.Integrantes }))
 );
@@ -39,6 +43,7 @@ const About = lazy(() =>
             <Route path="/integrantes" element={<Integrantes />} />
             <Route path="/" element={<Home />} />
             <Route path="/contato" element={<Contato />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/teste" element={<Teste />} />
             <Route path="/faq/:id?" element={<Faq />} />
             <Route path="/about" element={<About />} />

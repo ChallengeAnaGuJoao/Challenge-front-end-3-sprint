@@ -11,6 +11,7 @@ export function Header() {
     { to: "/about", label: "Sobre" },
     { to: "/integrantes", label: "Integrantes" },
     { to: "/faq", label: "FAQ" },
+    { to: "/login", label: "Login" },
     { to: "/teste", label: "Teste" },
     { to: "/contato", label: "Contato" },
   ];

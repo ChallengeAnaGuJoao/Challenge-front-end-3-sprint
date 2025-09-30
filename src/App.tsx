@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { NotFound } from "./pages/not-found"
 import { lazy, Suspense } from "react"
 import { Loading } from "./components/loading"
+import { Integrantes } from "./pages/integrantes";
 
 function App() {
 
@@ -18,6 +19,10 @@ const Teste = lazy(() =>
   import("./pages/teste").then((m) => ({ default: m.Teste }))
 );
 
+const Integrantes = lazy(() =>
+  import("./pages/integrantes").then((m) => ({ default: m.Integrantes }))
+);
+
 const About = lazy(() =>
   import("./pages/about").then((m) => ({ default: m.About }))
 );
@@ -28,6 +33,7 @@ const About = lazy(() =>
         <Routes>
           <Route>
             <Route index element={<Home />} />
+            <Route path="/integrantes" element={<Integrantes />} />
             <Route path="/" element={<Home />} />
             <Route path="/contato" element={<Contato />} />
             <Route path="/teste" element={<Teste />} />

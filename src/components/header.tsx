@@ -9,7 +9,8 @@ export function Header() {
   const links = [
     { to: "/", label: "Home" },
     { to: "/about", label: "Sobre" },
-     { to: "/contato", label: "Contato" },
+    { to: "/teste", label: "Teste" },
+    { to: "/contato", label: "Contato" },
   ];
 
   return (

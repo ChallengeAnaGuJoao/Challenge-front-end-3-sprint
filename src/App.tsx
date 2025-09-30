@@ -1,22 +1,36 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { Home } from "./pages/home"
-import { About } from "./pages/about"
-import { Contato } from "./pages/contato"
 import { NotFound } from "./pages/not-found"
-import { Suspense } from "react"
+import { lazy, Suspense } from "react"
 import { Loading } from "./components/loading"
 
 function App() {
 
+
+const Home = lazy(() =>
+  import("./pages/home").then((m) => ({ default: m.Home }))
+);
+
+const Contato = lazy(() =>
+  import("./pages/contato").then((m) => ({ default: m.Contato }))
+);
+
+const Teste = lazy(() =>
+  import("./pages/teste").then((m) => ({ default: m.Teste }))
+);
+
+const About = lazy(() =>
+  import("./pages/about").then((m) => ({ default: m.About }))
+);
 
   return (
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route>
-            <Route path="/" element={<Home />} />
             <Route index element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/contato" element={<Contato />} />
+            <Route path="/teste" element={<Teste />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
           </Route>

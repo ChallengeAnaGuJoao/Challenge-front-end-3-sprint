@@ -1,34 +1,62 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { NotFound } from "./pages/not-found"
+import { lazy, Suspense } from "react"
+import { Loading } from "./components/loading"
 
 function App() {
-  const [count, setCount] = useState(0)
+
+
+const Home = lazy(() =>
+  import("./pages/home").then((m) => ({ default: m.Home }))
+);
+
+const Contato = lazy(() =>
+  import("./pages/contato").then((m) => ({ default: m.Contato }))
+);
+
+const Faq = lazy(() =>
+  import("./pages/faq").then((m) => ({ default: m.Faq }))
+);  
+
+const Teste = lazy(() =>
+  import("./pages/teste").then((m) => ({ default: m.Teste }))
+);
+
+const Login = lazy(() =>
+  import("./pages/login").then((m) => ({ default: m.Login }))
+);
+
+const SignUp = lazy(() =>
+  import("./pages/SignUp").then((m) => ({ default: m.SignUp }))
+);
+
+const Integrantes = lazy(() =>
+  import("./pages/integrantes").then((m) => ({ default: m.Integrantes }))
+);
+
+const About = lazy(() =>
+  import("./pages/about").then((m) => ({ default: m.About }))
+);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <BrowserRouter>
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route>
+            <Route index element={<Home />} />
+            <Route path="/integrantes" element={<Integrantes />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/contato" element={<Contato />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/cadastrar" element={<SignUp />} />
+            <Route path="/teste" element={<Teste />} />
+            <Route path="/faq/:id?" element={<Faq />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   )
 }
 

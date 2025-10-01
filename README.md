@@ -1,73 +1,100 @@
-# React + TypeScript + Vite
+# Projeto Challenge Front-End 2º Semestre
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Integrantes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Ana Flavia Camelo - RM561489](https://github.com/afcamelo)
+- [Gustavo Kenji Terada - RM562745](https://github.com/Gkenji110)
+- [João Guilherme Carvalho Novaes - RM566234](https://github.com/JoaoGuiNovaes)
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologias
 
-## Expanding the ESLint configuration
+* **Frontend:** React, TypeScript, Tailwind CSS
+* **Controle de versão:** Git / GitHub
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Imagens e Ícones
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+<img src="src/assets/404-error.png" alt="404 error" width="300"/>
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+<img src="src/assets/anaflavia.jpeg" alt="Ana Flavia" width="200"/>
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+<img src="src/assets/atende+.png" alt="Atende+" width="250"/>
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+<img src="src/assets/contact-us-animate.svg" alt="Contact Us" width="300"/>
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+<img src="src/assets/github.png" alt="GitHub" width="100"/>
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+<img src="src/assets/gustavoterada.jpeg" alt="Gustavo Terada" width="200"/>
+
+<img src="src/assets/hospital-family-visit-animate.svg" alt="Hospital Family Visit" width="300"/>
+
+<img src="src/assets/joaoguilherme.jpeg" alt="João Guilherme" width="200"/>
+
+<img src="src/assets/linkedin.png" alt="LinkedIn" width="100"/>
+
+<img src="src/assets/login-animate.svg" alt="Login" width="300"/>
+
+<img src="src/assets/react.svg" alt="React" width="120"/>
+
+
+## Estrutura de pastas
+
+<pre>
+CHALLENGER-FRONT-END-2-SEM/
+├── node_modules/
+├── public/
+│   ├── models/
+│   ├── chat-bot-animate.svg
+│   └── vite.svg
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── App.tsx
+│   ├── index.css
+│   ├── main.tsx
+│   └── vite-env.d.ts
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+├── tailwind.config.cjs
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+</pre>
+
+## Como Rodar
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/ChallengeAnaGuJoao/Challenge-front-end-3-sprint/
+   ```
+2. Acesse a pasta do projeto:
+
+   ```bash
+   cd challenger-front-end-3-sprint
+   ```
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+4. Execute o projeto em modo de desenvolvimento:
+
+   ```bash
+   npm run dev
+   ```
+5. Abra o navegador em `http://localhost:5173` (ou a porta mostrada no terminal).
+
+## Repositório
+
+* **GitHub:** [https://github.com/ChallengeAnaGuJoao/Challenge-front-end-3-sprint/](https://github.com/ChallengeAnaGuJoao/Challenge-front-end-3-sprint/)
+
+## Link youtube
+https://www.youtube.com/watch?v=vE1QPvJ8KHw
